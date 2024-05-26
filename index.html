@@ -9,85 +9,87 @@
     <!--<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>-->
   </head>
   <body>
-    <div class="container">
-      <header>
-        <p class="project-header">John Cardarelli</p>
-        <p class="header-desc">Programming and DevOps projects</p>
-      </header>
+    <main>
+      <div class="container">
+        <header>
+          <p class="project-header">John Cardarelli</p>
+          <p class="header-desc">Programming and DevOps projects</p>
+        </header>
+        <div class="grid">
+          <div class="project grid-item">
+            <p class="project-title">Golang CLI tool for interacting with sqlite database file</p>
+            <a href="https://github.com/jcardarelli/fancy-cli" class="repo-link">github.com/jcardarelli/fancy-cli</a>
+            <hr>
+            <img src="https://private-user-images.githubusercontent.com/1383816/327220799-46d9618f-755b-44a7-a669-7dc38b0ce203.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY2NzQ3MTMsIm5iZiI6MTcxNjY3NDQxMywicGF0aCI6Ii8xMzgzODE2LzMyNzIyMDc5OS00NmQ5NjE4Zi03NTViLTQ0YTctYTY2OS03ZGMzOGIwY2UyMDMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MDUyNSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDA1MjVUMjIwMDEzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjFmMjkxOThlYzMyNTc0N2MwMWI3MTlkNWNkZjRmYTkyZDgxMjYwMzk1YWQxMGE5NDgxNDdlMTNhZmM1NWRiYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.FTzE4F2CVvFS5npjbwkoF7oHSGTPk21Rcw78pckmBAE"></img>
+          <p>Manages information about fancy restaurants that is then stored in a single sqlite database file.</p>
+          <p>Features:</p>
+          <ul>
+            <li>Get all restaurants</li>
+            <li>Create new restaurant</li>
+            <li>Delete restaurant</li>
+          </ul>
+        </div>
+        <div class="project grid-item">
+          <p class="project-title">Terraform to build Mail-in-a-Box server on Digital Ocean</p>
+          <a href="https://github.com/jcardarelli/mail-in-a-box-terraform" class="repo-link">github.com/jcardarelli/mail-in-a-box-terraform</a>
+          <hr>
+          <p>Terraform to create a Mail-in-a-Box instance on Digital Ocean with Floating IP and Spaces storage.</p>
+        </div>
+      </div>
       <div class="grid">
         <div class="project grid-item">
-          <p class="project-title">Golang CLI tool for interacting with sqlite database file</p>
-          <a href="https://github.com/jcardarelli/fancy-cli" class="repo-link">github.com/jcardarelli/fancy-cli</a>
+          <p class="project-title">Web microservice for interacting with sqlite database file</p>
+          <a href="https://github.com/jcardarelli/bumped" class="repo-link">github.com/jcardarelli/bumped</a>
           <hr>
-          <img src="https://private-user-images.githubusercontent.com/1383816/327220799-46d9618f-755b-44a7-a669-7dc38b0ce203.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY2NzQ3MTMsIm5iZiI6MTcxNjY3NDQxMywicGF0aCI6Ii8xMzgzODE2LzMyNzIyMDc5OS00NmQ5NjE4Zi03NTViLTQ0YTctYTY2OS03ZGMzOGIwY2UyMDMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MDUyNSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDA1MjVUMjIwMDEzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjFmMjkxOThlYzMyNTc0N2MwMWI3MTlkNWNkZjRmYTkyZDgxMjYwMzk1YWQxMGE5NDgxNDdlMTNhZmM1NWRiYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.FTzE4F2CVvFS5npjbwkoF7oHSGTPk21Rcw78pckmBAE"></img>
-        <p>Manages information about fancy restaurants that is then stored in a single sqlite database file.</p>
-        <p>Features:</p>
-        <ul>
-          <li>Get all restaurants</li>
-          <li>Create new restaurant</li>
-          <li>Delete restaurant</li>
-        </ul>
-      </div>
-      <div class="project grid-item">
-        <p class="project-title">Terraform to build Mail-in-a-Box server on Digital Ocean</p>
-        <a href="https://github.com/jcardarelli/mail-in-a-box-terraform" class="repo-link">github.com/jcardarelli/mail-in-a-box-terraform</a>
-        <hr>
-        <p>Terraform to create a Mail-in-a-Box instance on Digital Ocean with Floating IP and Spaces storage.</p>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="project grid-item">
-        <p class="project-title">Web microservice for interacting with sqlite database file</p>
-        <a href="https://github.com/jcardarelli/bumped" class="repo-link">github.com/jcardarelli/bumped</a>
-        <hr>
-        <p>There are two microservices:</p>
-        <ol>
-          <li>Golang API with Gin framework</li>
-          <li>Nginx web server</li>
-        </ol>
-      </div>
-      <div class="project grid-item">
-        <p class="project-title">Home K3s cluster with internal DNS & internal <abbr title="Certificate Authority">CA</abbr></p>
-        <p class="repo-link">Repo is WIP and not on github yet</p>
-        <hr>
-        <p>Automated bootstrapping of K3s and base cluster services for my Kubernetes homelab:</p>
-        <ul>
-          <li>Calls existing ansible role for K3s</li>
-          <li>Custom ansible roles to automate provisioning of base cluster services</li>
+          <p>There are two microservices:</p>
+          <ol>
+            <li>Golang API with Gin framework</li>
+            <li>Nginx web server</li>
+          </ol>
+        </div>
+        <div class="project grid-item">
+          <p class="project-title">Home K3s cluster with internal DNS & internal <abbr title="Certificate Authority">CA</abbr></p>
+          <p class="repo-link">Repo is WIP and not on github yet</p>
+          <hr>
+          <p>Automated bootstrapping of K3s and base cluster services for my Kubernetes homelab:</p>
           <ul>
-            <li>MetalLB - L4 load balancing across multiple internal hosts</li>
-            <li>Traefik - Reverse proxy for each service, i.e. service.int.example.com</li>
-            <li>CoreDNS - Create A record for each new service</li>
-            <li>StepCA - Self-hosted certificate authority</li>
+            <li>Calls existing ansible role for K3s</li>
+            <li>Custom ansible roles to automate provisioning of base cluster services</li>
+            <ul>
+              <li>MetalLB - L4 load balancing across multiple internal hosts</li>
+              <li>Traefik - Reverse proxy for each service, i.e. service.int.example.com</li>
+              <li>CoreDNS - Create A record for each new service</li>
+              <li>StepCA - Self-hosted certificate authority</li>
+            </ul>
           </ul>
-        </ul>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="project grid-item">
-        <p class="project-title">This website on GitHub Pages</p>
-        <a href="https://github.com/jcardarelli/jcardarelli.github.io" class="repo-link">github.com/jcardarelli/jcardarelli.github.io</a>
-        <hr>
-        <p>Features:</p>
-        <ul>
-          <li>Artisinal HTML</li>
-          <li>Pico CSS library as a base style</li>
-          <li>Handcrated, custom styles for that rustic feeling</li>
-        </ul>
-      </div>
-      <div class="project grid-item">
-        <p class="project-title">Dotfiles for neovim, tmux, fish, kitty, etc. configuration</p>
-        <a href="https://github.com/jcardarelli/.dotfiles" class="repo-link">github.com/jcardarelli/.dotfiles</a>
-        <hr>
-        <p>The configurations in this repo are symlinked with GNU Stow</p>
-        <div class="grid">
-          <div>Neovim: <img src="img/kitty.svg" class="dotfile-program" /></div>
-        </div>
-        <div class="grid">
-          <div>Tmux: <img src="img/neovim.svg" class="dotfile-program" /></div>
         </div>
       </div>
+      <div class="grid">
+        <div class="project grid-item">
+          <p class="project-title">This website on GitHub Pages</p>
+          <a href="https://github.com/jcardarelli/jcardarelli.github.io" class="repo-link">github.com/jcardarelli/jcardarelli.github.io</a>
+          <hr>
+          <p>Features:</p>
+          <ul>
+            <li>Artisinal HTML</li>
+            <li>Pico CSS library as a base style</li>
+            <li>Handcrated, custom styles for that rustic feeling</li>
+          </ul>
+        </div>
+        <div class="project grid-item">
+          <p class="project-title">Dotfiles for neovim, tmux, fish, kitty, etc. configuration</p>
+          <a href="https://github.com/jcardarelli/.dotfiles" class="repo-link">github.com/jcardarelli/.dotfiles</a>
+          <hr>
+          <p>The configurations in this repo are symlinked with GNU Stow</p>
+          <div class="grid">
+            <div>Neovim: <img src="img/kitty.svg" class="dotfile-program" /></div>
+          </div>
+          <div class="grid">
+            <div>Tmux: <img src="img/neovim.svg" class="dotfile-program" /></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
 </body>
 </html>
