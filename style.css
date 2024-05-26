@@ -1,0 +1,60 @@
+/* overrides */
+p, li, a {
+	font-size: 0.8em;
+}
+ul {
+	margin-top: -0.6em;
+}
+img {
+	padding-bottom: 1em;
+}
+
+/* custom classes */
+.header {
+	padding-left: 0.65em;
+	padding-top: 2em;
+}
+.header-desc {
+	padding-left: 1.5em;
+	margin-bottom: 3em;
+	font-size: 1em;
+}
+.project {
+	margin-bottom: 1em;
+	padding: 1em;
+	border: 1px dashed #cccccc;
+	/*background: #ffffff;*/
+}
+.project-header {
+	margin: 0 0 1em 0;
+	/*background: #f9f9f9;*/
+	padding-left: 0.55em;
+	font-weight: 600;
+	font-size: 2em;
+}
+.project:hover {
+	padding: 1em;
+	border: 1px dashed #cccccc;
+	/*background: #f9f9f9;*/
+	background: #24283b;
+}
+.project-title {
+	margin-bottom: 0;
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: 600;
+}
+.repo-link {
+	/*background: #f0f0f0;*/
+	background: #0e0e00e;
+	font-weight: 200;
+	font-size: 1.4em;
+}
+.dotfile-program {
+	width: 150px;
+	height: 150px;
+}
+
+/* selection styles */
+::selection { background: #000000; } /* WebKit/Blink Browsers */
+::-moz-selection { background: #000000; } /* Gecko Browsers */
