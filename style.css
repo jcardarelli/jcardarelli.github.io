@@ -7,6 +7,10 @@ img {
 	padding-bottom: 1em;
 }
 
+pre {
+	white-space: pre-line;
+}
+
 /* custom classes */
 .header {
 	padding-left: 0.65em;
@@ -96,4 +100,40 @@ img {
 
 @media (prefers-color-scheme: dark) {
 	::selection { background: #000; }
+}
+
+/* fake terminal in css */
+.terminal {
+  background-color: #1f2335;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.command {
+  margin-left: 0.7em;
+  color: #7aa2f7;
+}
+
+.readline {
+  padding-left: 0.6em;
+  color: #7dcfff;
+}
+
+.prompt-dir {
+  background-color: #80acff;
+  padding: 2px 10px;
+  color: #1e202f;
+}
+
+.prompt-git {
+  /* dirty branch */
+
+  /* background-color: #e0af67; */
+  background-color: #9ecd6a; /* clean branch */
+  color: #1e202f;
+  padding: 2px 10px;
+}
+
+.stdout {
+  color: #c0caf4;
 }
