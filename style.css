@@ -110,6 +110,12 @@ pre {
   font-size: 0.8em;
   line-height: 1.9em;
 }
+.terminal pre::selection { background: #2e3c64; }
+.terminal .prompt-dir::selection { background: #2e3c64; color: #c0c9f5; }
+.terminal .prompt-git::selection { background: #2e3c64; color: #c0c9f5; }
+.terminal .readline::selection { background: #2e3c64; }
+.terminal .readline .command::selection { background: #2e3c64; }
+.terminal .stdout::selection { background: #2e3c64; }
 
 .command {
   margin-left: 0.7em;
