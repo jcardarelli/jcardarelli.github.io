@@ -6,6 +6,8 @@
     <title>john cardarelli: projects</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <!--<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>-->
   </head>
   <body>
@@ -15,19 +17,13 @@
           <p class="project-header">John Cardarelli</p>
           <p class="header-desc">Programming and DevOps projects</p>
         </header>
+        <div id="modal-content"></div>
         <div class="grid">
           <div class="project grid-item">
-            <a href="https://github.com/jcardarelli/fancy-cli" class="repo-link" target="new">
-              <p class="project-title">Golang CLI tool for interacting with sqlite database file</p>
+            <a href="https://github.com/jcardarelli/fancy-cli" class="repo-link" target="new" data-tooltip="open github repo">
+              <p class="project-title">CLI tool for interacting with sqlite database file</p>
             </a>
-            <section class="terminal">
-              <span class="prompt-dir">~/c/fancy-cli</span><span class="prompt-git">main</span><span class="readline"><span class="command">make</span></span>
-              <br />
-              <pre class="stdout">
-go fmt
-go vet
-go build -o fancy
-              </pre>
+            <section class="terminal overflow-auto">
               <span class="prompt-dir">~/c/fancy-cli</span><span class="prompt-git">main</span><span class="readline"><span class="command">./fancy</span> restaurant get --all</span>
               <pre class="stdout">
 
@@ -44,20 +40,24 @@ _______________________________________________/\/\/\/\___
  3  Benu                22 Hawthorne St, San Francisco, CA 94105      3
 				</pre>
             </section>
-            <p>Manages information about fancy restaurants that is then stored in a single sqlite database file.</p>
-            <p>Features:</p>
-            <ul>
-              <li>Get all restaurants</li>
-              <li>Create new restaurant</li>
-              <li>Delete restaurant</li>
-            </ul>
+            <section class="project-desc">
+              <button class="build" hx-trigger="load" hx-get="projects/fancy-cli/index.html" hx-target="#modal-content">build info</button>
+              <p>Manages information about fancy restaurants that is then stored in a single sqlite database file.</p>
+              <p>Features:</p>
+              <ul>
+                <li>Get all restaurants</li>
+                <li>Create new restaurant</li>
+                <li>Delete restaurant</li>
+              </ul>
+            </section>
           </div>
           <div class="project grid-item">
             <a href="https://github.com/jcardarelli/mail-in-a-box-terraform" class="repo-link" target="new">
               <p class="project-title">Terraform module for Mail-in-a-Box droplet</p>
             </a>
-            <hr>
-            <p>Terraform to create a Mail-in-a-Box instance on Digital Ocean with Floating IP and Spaces storage.</p>
+            <section class="project-desc">
+              <p>Terraform to create a Mail-in-a-Box instance on Digital Ocean with Floating IP and Spaces storage.</p>
+            </section>
           </div>
         </div>
         <div class="grid">
@@ -65,39 +65,42 @@ _______________________________________________/\/\/\/\___
             <a href="https://github.com/jcardarelli/bumped" class="repo-link" target="new">
               <p class="project-title">Web microservice for interacting with sqlite database file</p>
             </a>
-            <hr>
             <section class="terminal">
               <span class="prompt-dir">~/c/bumped</span><span class="prompt-git">main</span><span class="readline"><span class="command">docker-compose</span> up --build</span>
               <br />
               <pre class="stdout">
-[+] Running 2/2
+<span class="stdout-blue">[+] Running 2/2</span>
  <span class="stdout-green">✔</span> Container bumped-api    <span class="stdout-green">Running</span>
  <span class="stdout-green">✔</span> Container bumped-nginx  <span class="stdout-green">Recreated</span>
 Attaching to bumped-api, bumped-nginx
               </pre>
+              \\
             </section>
-            <p>There are two microservices:</p>
-            <ol>
-              <li>Golang API with Gin framework</li>
-              <li>Nginx web server that hosts HTMX frontend</li>
-            </ol>
+            <section class="project-desc">
+              <p>There are two microservices:</p>
+              <ol>
+                <li>Golang API with Gin framework</li>
+                <li>Nginx web server that hosts HTMX frontend</li>
+              </ol>
+            </section>
           </div>
           <div class="project grid-item">
             <p class="repo-link">
               <p class="project-title">Home K3s cluster with internal DNS & internal <abbr title="Certificate Authority">CA</abbr></p>
             </p>
-            <hr>
-            <p>Automated bootstrapping of K3s and base cluster services for my Kubernetes homelab:</p>
-            <ul>
-              <li>Calls existing ansible role for K3s</li>
-              <li>Custom ansible roles to automate provisioning of base cluster services</li>
+            <section class="project-desc">
+              <p>Automated bootstrapping of K3s and base cluster services for my Kubernetes homelab:</p>
               <ul>
-                <li>MetalLB - L4 load balancing across multiple internal hosts</li>
-                <li>Traefik - Reverse proxy for each service, i.e. service.int.example.com</li>
-                <li>CoreDNS - Create A record for each new service</li>
-                <li>StepCA - Self-hosted certificate authority</li>
+                <li>Calls existing ansible role for K3s</li>
+                <li>Custom ansible roles to automate provisioning of base cluster services</li>
+                <ul>
+                  <li>MetalLB - L4 load balancing across multiple internal hosts</li>
+                  <li>Traefik - Reverse proxy for each service, i.e. service.int.example.com</li>
+                  <li>CoreDNS - Create A record for each new service</li>
+                  <li>StepCA - Self-hosted certificate authority</li>
+                </ul>
               </ul>
-            </ul>
+            </section>
           </div>
         </div>
         <div class="grid">
@@ -105,26 +108,28 @@ Attaching to bumped-api, bumped-nginx
             <a href="https://github.com/jcardarelli/jcardarelli.github.io" class="repo-link" target="new">
               <p class="project-title">This website on GitHub Pages</p>
             </a>
-            <hr>
-            <p>Features:</p>
-            <ul>
-              <li>Artisinal HTML</li>
-              <li>Pico CSS library as a base style</li>
-              <li>Handcrated, custom stylesheets for that rustic feeling</li>
-            </ul>
+            <section class="project-desc">
+              <p>Features:</p>
+              <ul>
+                <li>Artisinal HTML</li>
+                <li>Pico CSS library as a base style</li>
+                <li>Handcrated, custom stylesheets for that rustic feeling</li>
+              </ul>
+            </section>
           </div>
           <div class="project grid-item">
             <a href="https://github.com/jcardarelli/.dotfiles" class="repo-link" target="new">
-              <p class="project-title">Dotfiles for neovim, tmux, fish, kitty, etc. configuration</p>
+              <p class="project-title">Dotfiles for neovim, tmux, fish, kitty, etc.</p>
             </a>
-            <hr>
-            <p>The configurations in this repo are symlinked with GNU Stow</p>
-            <div class="grid">
-              <div>Neovim: <img src="img/kitty.svg" class="dotfile-program" /></div>
-            </div>
-            <div class="grid">
-              <div>Tmux: <img src="img/neovim.svg" class="dotfile-program" /></div>
-            </div>
+            <section class="project-desc">
+              <p>The configurations in this repo are symlinked with GNU Stow</p>
+              <div class="grid">
+                <div>Neovim: <img src="img/kitty.svg" class="dotfile-program" /></div>
+              </div>
+              <div class="grid">
+                <div>Tmux: <img src="img/neovim.svg" class="dotfile-program" /></div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

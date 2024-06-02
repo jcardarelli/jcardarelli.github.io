@@ -1,10 +1,5 @@
 /* overrides */
-p, li, a {
-  font-size: 0.8em;
-}
-
 pre {
-  white-space: pre-wrap;
   margin: 0;
 }
 
@@ -25,6 +20,10 @@ pre {
   padding: 1em;
 }
 
+.project-desc {
+  font-size: 0.7em;
+}
+
 @media (prefers-color-scheme: light) {
   .project {
     border: 1px dashed #ccc;
@@ -40,8 +39,16 @@ pre {
 .project-header {
   margin: 0 0 1em;
   padding-left: 0.55em;
-  font-weight: 600;
-  font-size: 2em;
+  font-family: monospace;
+  font-weight: 100;
+  font-size: 1.8em;
+  color: #0072ad;
+}
+
+@media (prefers-color-scheme: light) {
+	.project-header {
+		background-color: #f9f9f9;
+	}
 }
 
 .project:hover {
@@ -67,6 +74,7 @@ pre {
   font-size: 1em;
   font-style: italic;
   font-weight: 600;
+  padding-bottom: 0.6em;
 }
 
 .repo-link {
@@ -92,7 +100,7 @@ pre {
 }
 
 @media (prefers-color-scheme: light) {
-  ::selection { background: #efefef; }
+  ::selection { background: #d6e4ff; }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -147,8 +155,13 @@ pre {
   color: #c0caf4;
   padding-left: 4px;
   padding-bottom: 4px;
+  text-wrap: nowrap;
 }
 
 .stdout-green {
 	color: #9ece6a
+}
+
+.stdout-blue {
+  color: #7aa2f7;
 }
