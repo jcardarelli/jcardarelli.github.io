@@ -158,6 +158,7 @@ pre {
   text-wrap: nowrap;
 }
 
+/* TODO: Add variables for common colors */
 .stdout-green {
 	color: #9ece6a
 }
