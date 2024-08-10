@@ -1,4 +1,4 @@
-function openModalWindow() {
+function openFancyCliBuildInfoModal() {
   document
     .getElementsByClassName("build")
     .item(0)
@@ -12,7 +12,7 @@ function openModalWindow() {
     });
 }
 
-function closeModalWindow() {
+function closeFancyCliBuildInfoModal() {
   document
     .getElementsByTagName("dialog")
     .item(0)
@@ -27,6 +27,6 @@ function closeModalWindow() {
 }
 
 window.onload = function () {
-  openModalWindow();
-  closeModalWindow();
+  openFancyCliBuildInfoModal();
+  closeFancyCliBuildInfoModal();
 };
