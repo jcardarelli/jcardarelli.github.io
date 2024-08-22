@@ -3,6 +3,10 @@ pre {
   margin: 0;
 }
 
+body {
+	font-size: 0.80em;
+}
+
 /* custom classes */
 .header {
   padding-left: 0.65em;
@@ -15,24 +19,38 @@ pre {
   font-size: 1em;
 }
 
+.grid-sizer,
+.grid-item {
+	width: 47%;
+	margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+
+	/* https://stackoverflow.com/a/74977615/647606 */
+	container-type: inline-size;
+}
+
+ .grid-item--width2 { width: 80%; } 
+
 .project {
   margin-bottom: 1em;
   padding: 1em;
 }
 
 .project-desc {
-  font-size: 0.7em;
+	font-style: italic;
 }
 
 @media (prefers-color-scheme: light) {
-  .project {
+  .grid-item {
     border: 1px dashed #ccc;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .project {
-    border: 1px dashed #0e0e0e;
+  .grid-item {
+	background-color: transparent;
+    border: 1px dashed #696969;
   }
 }
 
@@ -51,30 +69,29 @@ pre {
 	}
 }
 
-.project:hover {
-  padding: 1em;
+.grid-item:hover {
+  border: 1px dashed;
 }
 
 @media (prefers-color-scheme: light) {
-  .project:hover {
+  .grid-item:hover {
     background: #f9f9f9;
-    border: 1px dashed #ccc;
+    border-color: #ccc;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .project:hover {
+  .grid-item:hover {
     background: #24283b;
-    border: 1px dashed #000;
+    border-color: #ccc;
   }
 }
 
 .project-title {
   margin-bottom: 0;
-  font-size: 1em;
+  font-size: 1.1em;
   font-style: italic;
   font-weight: 600;
-  padding-bottom: 0.6em;
 }
 
 .repo-link {
@@ -95,8 +112,8 @@ pre {
 }
 
 .dotfile-program {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -111,8 +128,8 @@ pre {
 .terminal {
   background-color: #1f2335;
   font-family: monospace;
-  font-size: 0.8em;
-  line-height: 1.9em;
+  font-size: 2.6cqw;
+  line-height: 5cqw;
 }
 .terminal pre::selection { background: #2e3c64; }
 .terminal .prompt-dir::selection { background: #2e3c64; color: #c0c9f5; }
@@ -124,28 +141,28 @@ pre {
 
 .command {
   margin-left: 0.7em;
-
-  /* padding-top: 8px; */
+  font-size: 0.95em;
   color: #7aa2f7;
 }
 
 .readline {
   background-color: inherit;
-
-  /* padding-left: 0.6em; */
   padding: 2px 4px;
+  font-size: 0.9em;
   color: #7dcfff;
 }
 
 .prompt-dir {
   background-color: #80acff;
   padding: 2px 10px;
+  font-size: 0.9em;
   color: #1e202f;
 }
 
 .prompt-git {
   /* background-color: #e0af67; dirty branch */
   background-color: #9ecd6a; /* clean branch */
+  font-size: 0.9em;
   color: #1e202f;
   padding: 2px 10px;
 }
@@ -156,13 +173,36 @@ pre {
   padding-left: 4px;
   padding-bottom: 4px;
   text-wrap: nowrap;
+  line-height: 1.4em;
 }
 
 /* TODO: Add variables for common colors */
 .stdout-green {
-	color: #9ece6a
+  color: #9ece6a
 }
 
 .stdout-blue {
   color: #7aa2f7;
+}
+
+.small-button {
+  font-family: monospace;
+  font-size: 0.8em;
+  padding: 0.6em;
+}
+
+@media (prefers-color-scheme: light) {
+  .current-page {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .current-page {
+    background-color: #0e0e00;
+  }
+}
+
+footer {
+	text-align: center;
 }
