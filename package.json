@@ -11,5 +11,9 @@
   "devDependencies": {
     "stylelint": "^16.6.0",
     "stylelint-config-standard": "^36.0.0"
+  },
+  "dependencies": {
+    "masonry": "^0.0.2",
+    "masonry-layout": "^4.2.2"
   }
 }
