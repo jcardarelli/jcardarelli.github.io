@@ -228,3 +228,9 @@ body {
 footer {
   text-align: center;
 }
+.about {
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  display: none;
+}
