@@ -1,61 +1,58 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>john cardarelli</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <script
-            src="https://unpkg.com/htmx.org@1.9.12"
-            integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
-            crossorigin="anonymous"
-        ></script>
-        <script src="index.js"></script>
-        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    </head>
-    <body>
-        <main class="container">
-            <header>
-                <nav>
-                    <ul>
-                        <li class="project-header">
-                            <strong>John Cardarelli</strong>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="current-page"><a href="#">Projects</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div
-                class="grid"
-                data-masonry='{ "percentPosition": true, "itemSelector": ".grid-item", "columnWidth": ".grid-sizer" }'
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>john cardarelli</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.12"
+      integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <nav>
+          <ul>
+            <li class="project-header">
+              <strong>John Cardarelli</strong>
+            </li>
+          </ul>
+          <ul>
+            <li class="current-page"><a href="#">Projects</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div
+        class="grid"
+        data-masonry='{ "percentPosition": true, "itemSelector": ".grid-item", "columnWidth": ".grid-sizer" }'
+      >
+        <div class="grid-sizer"></div>
+        <div class="grid-item">
+          <a
+            href="https://github.com/jcardarelli/fancy-cli"
+            class="repo-link"
+            target="new"
+            data-tooltip="open github repo"
+          >
+            <p class="project-title">Fancy CLI</p>
+          </a>
+          <p class="project-desc">Go CLI tool for managing restaurant info</p>
+          <section class="terminal overflow-auto">
+            <span class="prompt-dir">~/c/fancy-cli</span
+            ><span class="prompt-git">main</span
+            ><span class="readline"
+              ><span class="command">./fancy</span> restaurant get --all</span
             >
-                <div class="grid-sizer"></div>
-                <div class="grid-item">
-                    <a
-                        href="https://github.com/jcardarelli/fancy-cli"
-                        class="repo-link"
-                        target="new"
-                        data-tooltip="open github repo"
-                    >
-                        <p class="project-title">Fancy CLI</p>
-                    </a>
-                    <p class="project-desc">
-                        Go CLI tool for managing restaurant info
-                    </p>
-                    <section class="terminal overflow-auto">
-                        <span class="prompt-dir">~/c/fancy-cli</span
-                        ><span class="prompt-git">main</span
-                        ><span class="readline"
-                            ><span class="command">./fancy</span> restaurant get
-                            --all</span
-                        >
-                        <pre class="stdout">
+            <pre class="stdout">
 
 ___/\/\/\_________________________________________________
 _/\/\______/\/\/\______/\/\/\/\______/\/\/\/\__/\/\__/\/\_
@@ -69,153 +66,139 @@ _______________________________________________/\/\/\/\___
  2  Birdsong            1085 Mission St, San Francisco, CA 94103      2
  3  Benu                22 Hawthorne St, San Francisco, CA 94105      3
               </pre
-                        >
-                    </section>
-                    <div id="modal-content"></div>
-                    <section class="project-desc">
-                        <button
-                            class="build small-button"
-                            hx-trigger="load"
-                            hx-get="projects/fancy-cli/index.html"
-                            hx-target="#modal-content"
-                        >
-                            build info
-                        </button>
-                        <p>
-                            Manages information about fancy restaurants that is
-                            then stored in a single sqlite database.
-                        </p>
-                        <p>Features:</p>
-                        <ul>
-                            <li>Get all restaurants</li>
-                            <li>Create new restaurant</li>
-                            <li>Delete restaurant</li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="grid-item">
-                    <a
-                        href="https://github.com/jcardarelli/mail-in-a-box-terraform"
-                        class="repo-link"
-                        target="new"
-                    >
-                        <p class="project-title">
-                            Terraform module to install Mail-in-a-Box on a
-                            Digital Ocean Droplet
-                        </p>
-                    </a>
-                    <section class="project-desc">
-                        <p>
-                            Terraform module to create a Mail-in-a-Box Droplet
-                            on Digital Ocean with Floating IP and Spaces
-                            storage.
-                        </p>
-                    </section>
-                </div>
-                <div class="grid-item">
-                    <a
-                        href="https://github.com/jcardarelli/bumped"
-                        class="repo-link"
-                        target="new"
-                    >
-                        <p class="project-title">Bumped web service</p>
-                    </a>
-                    <p class="project-desc">
-                        Go web microservice for interacting with sqlite database
-                    </p>
-                    <section class="terminal">
-                        <span class="prompt-dir">~/c/bumped</span
-                        ><span class="prompt-git">main</span
-                        ><span class="readline"
-                            ><span class="command">docker-compose</span> up
-                            --build</span
-                        >
-                        <br />
-                        <pre class="stdout">
+            >
+          </section>
+          <div id="modal-content"></div>
+          <section class="project-desc">
+            <button
+              class="build small-button"
+              hx-trigger="load"
+              hx-get="projects/fancy-cli/index.html"
+              hx-target="#modal-content"
+            >
+              build info
+            </button>
+            <p>
+              Manages information about fancy restaurants that is then stored in
+              a single sqlite database.
+            </p>
+            <p>Features:</p>
+            <ul>
+              <li>Get all restaurants</li>
+              <li>Create new restaurant</li>
+              <li>Delete restaurant</li>
+            </ul>
+          </section>
+        </div>
+        <div class="grid-item">
+          <a
+            href="https://github.com/jcardarelli/mail-in-a-box-terraform"
+            class="repo-link"
+            target="new"
+          >
+            <p class="project-title">
+              Terraform module to install Mail-in-a-Box on a Digital Ocean
+              Droplet
+            </p>
+          </a>
+          <section class="project-desc">
+            <p>
+              Terraform module to create a Mail-in-a-Box Droplet on Digital
+              Ocean with Floating IP and Spaces storage.
+            </p>
+          </section>
+        </div>
+        <div class="grid-item">
+          <a
+            href="https://github.com/jcardarelli/bumped"
+            class="repo-link"
+            target="new"
+          >
+            <p class="project-title">Bumped web service</p>
+          </a>
+          <p class="project-desc">
+            Go web microservice for interacting with sqlite database
+          </p>
+          <section class="terminal">
+            <span class="prompt-dir">~/c/bumped</span
+            ><span class="prompt-git">main</span
+            ><span class="readline"
+              ><span class="command">docker-compose</span> up --build</span
+            >
+            <br />
+            <pre class="stdout">
 <span class="stdout-blue">[+] Running 2/2</span>
  <span class="stdout-green">✔</span> Container bumped-api    <span class="stdout-green">Running</span>
  <span class="stdout-green">✔</span> Container bumped-nginx  <span class="stdout-green">Recreated</span>
 Attaching to bumped-api, bumped-nginx
               </pre>
-                    </section>
-                    <section class="project-desc">
-                        <p>There are two microservices:</p>
-                        <ol>
-                            <li>Golang API with Gin framework</li>
-                            <li>Nginx web server that hosts HTMX frontend</li>
-                        </ol>
-                    </section>
-                </div>
-                <div class="grid-item">
-                    <a
-                        href="https://github.com/jcardarelli/.dotfiles"
-                        class="repo-link"
-                        target="new"
-                    >
-                        <p class="project-title">Dotfiles</p>
-                    </a>
-                    <p class="project-desc">
-                        Configuration files for command line utilities and
-                        tools.
-                    </p>
-                    <section class="project-desc">
-                        <div class="grid">
-                            <div>
-                                <img
-                                    src="img/kitty.svg"
-                                    class="dotfile-program"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                    src="img/neovim.svg"
-                                    class="dotfile-program"
-                                />
-                            </div>
-                        </div>
-                        <p>Features:</p>
-                        <ul>
-                            <li>
-                                Any config in this repo can be synced using GNU
-                                Stow
-                            </li>
-                            <li>Git Delta for `git diff` highlighting</li>
-                            <li>
-                                Neovim configured with custom keymaps for
-                                running git commands in toggleterm while coding
-                            </li>
-                            <li>Tokyonight theme for neovim, tmux, and more</li>
-                        </ul>
-                    </section>
-                </div>
+          </section>
+          <section class="project-desc">
+            <p>There are two microservices:</p>
+            <ol>
+              <li>Golang API with Gin framework</li>
+              <li>Nginx web server that hosts HTMX frontend</li>
+            </ol>
+          </section>
+        </div>
+        <div class="grid-item">
+          <a
+            href="https://github.com/jcardarelli/.dotfiles"
+            class="repo-link"
+            target="new"
+          >
+            <p class="project-title">Dotfiles</p>
+          </a>
+          <p class="project-desc">
+            Configuration files for command line utilities and tools.
+          </p>
+          <section class="project-desc">
+            <div class="grid">
+              <div>
+                <img src="img/kitty.svg" class="dotfile-program" />
+              </div>
+              <div>
+                <img src="img/neovim.svg" class="dotfile-program" />
+              </div>
             </div>
-        </main>
-        <footer>
-            <a href="#">About this website</a>
-            <div class="about">
-                <a
-                    href="https://github.com/jcardarelli/jcardarelli.github.io"
-                    class="repo-link"
-                    target="new"
-                >
-                    <p class="project-title">code for this website</p>
-                </a>
-                <section class="project-desc">
-                    <p>Features:</p>
-                    <ul>
-                        <li>
-                            Artisinal HTML, no frameworks (but I could probably
-                            use one)
-                        </li>
-                        <li>HTMX for interactive elements, e.g. modals</li>
-                        <li>Pico CSS library as a base style</li>
-                        <li>
-                            Masonry javascript library for tiling effect on
-                            project page
-                        </li>
-                    </ul>
-                </section>
-            </div>
-        </footer>
-    </body>
+            <p>Features:</p>
+            <ul>
+              <li>Any config in this repo can be synced using GNU Stow</li>
+              <li>Git Delta for `git diff` highlighting</li>
+              <li>
+                Neovim configured with custom keymaps for running git commands
+                in toggleterm while coding
+              </li>
+              <li>Tokyonight theme for neovim, tmux, and more</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="#">About this website</a>
+      <div class="about">
+        <a
+          href="https://github.com/jcardarelli/jcardarelli.github.io"
+          class="repo-link"
+          target="new"
+        >
+          <p class="project-title">code for this website</p>
+        </a>
+        <section class="project-desc">
+          <p>Features:</p>
+          <ul>
+            <li>
+              Artisinal HTML, no frameworks (but I could probably use one)
+            </li>
+            <li>HTMX for interactive elements, e.g. modals</li>
+            <li>Pico CSS library as a base style</li>
+            <li>
+              Masonry javascript library for tiling effect on project page
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+  </body>
 </html>
