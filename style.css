@@ -1,4 +1,5 @@
-/* overrides */
+/* Variables */
+/* Overrides */
 pre {
   margin: 0;
 }
@@ -7,7 +8,7 @@ body {
   font-size: 0.8em;
 }
 
-/* custom classes */
+/* Custom Classes */
 .header {
   padding-left: 0.65em;
   padding-top: 2em;
@@ -19,15 +20,38 @@ body {
   font-size: 1em;
 }
 
-.grid-sizer,
-.grid-item {
+.grid-sizer, .grid-item {
   width: 47%;
   margin-right: 1em;
   margin-bottom: 1em;
   padding: 1em;
-
-  /* https://stackoverflow.com/a/74977615/647606 */
   container-type: inline-size;
+}
+@media (prefers-color-scheme: light) {
+  .grid-sizer, .grid-item {
+    border: 1px dashed #ccc;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .grid-sizer, .grid-item {
+    background-color: transparent;
+    border: 1px dashed #696969;
+  }
+}
+.grid-sizer:hover, .grid-item:hover {
+  border: 1px dashed;
+}
+@media (prefers-color-scheme: light) {
+  .grid-sizer:hover, .grid-item:hover {
+    background: #f9f9f9;
+    border-color: #ccc;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .grid-sizer:hover, .grid-item:hover {
+    background: #24283b;
+    border-color: #ccc;
+  }
 }
 
 .grid-item--width2 {
@@ -43,19 +67,6 @@ body {
   font-style: italic;
 }
 
-@media (prefers-color-scheme: light) {
-  .grid-item {
-    border: 1px dashed #ccc;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .grid-item {
-    background-color: transparent;
-    border: 1px dashed #696969;
-  }
-}
-
 .project-header {
   margin: 0 0 1em;
   padding-left: 0.55em;
@@ -64,28 +75,9 @@ body {
   font-size: 1.8em;
   color: #0072ad;
 }
-
 @media (prefers-color-scheme: light) {
   .project-header {
     background-color: #f9f9f9;
-  }
-}
-
-.grid-item:hover {
-  border: 1px dashed;
-}
-
-@media (prefers-color-scheme: light) {
-  .grid-item:hover {
-    background: #f9f9f9;
-    border-color: #ccc;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .grid-item:hover {
-    background: #24283b;
-    border-color: #ccc;
   }
 }
 
@@ -100,13 +92,11 @@ body {
   font-weight: 200;
   font-size: 1.4em;
 }
-
 @media (prefers-color-scheme: light) {
   .repo-link {
     background: #f0f0f0;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   .repo-link {
     background-color: #0e0e00;
@@ -123,42 +113,24 @@ body {
     background: #d6e4ff;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   ::selection {
     background: #000;
   }
 }
-
-/* fake terminal in css */
+/* Fake terminal in CSS */
 .terminal {
   background-color: #1f2335;
   font-family: monospace;
   font-size: 2.6cqw;
   line-height: 5cqw;
 }
-.terminal pre::selection {
+.terminal pre::selection, .terminal .readline::selection, .terminal .readline .command::selection, .terminal .stdout::selection, .terminal .stdout-green::selection {
   background: #2e3c64;
 }
-.terminal .prompt-dir::selection {
+.terminal .prompt-dir::selection, .terminal .prompt-git::selection {
   background: #2e3c64;
   color: #c0c9f5;
-}
-.terminal .prompt-git::selection {
-  background: #2e3c64;
-  color: #c0c9f5;
-}
-.terminal .readline::selection {
-  background: #2e3c64;
-}
-.terminal .readline .command::selection {
-  background: #2e3c64;
-}
-.terminal .stdout::selection {
-  background: #2e3c64;
-}
-.terminal .stdout-green::selection {
-  background: #2e3c64;
 }
 
 .command {
@@ -174,19 +146,18 @@ body {
   color: #7dcfff;
 }
 
-.prompt-dir {
-  background-color: #80acff;
+.prompt-dir, .prompt-git {
   padding: 2px 10px;
   font-size: 0.9em;
   color: #1e202f;
 }
 
+.prompt-dir {
+  background-color: #80acff;
+}
+
 .prompt-git {
-  /* background-color: #e0af67; dirty branch */
-  background-color: #9ecd6a; /* clean branch */
-  font-size: 0.9em;
-  color: #1e202f;
-  padding: 2px 10px;
+  background-color: #9ecd6a;
 }
 
 .stdout {
@@ -198,7 +169,6 @@ body {
   line-height: 1.4em;
 }
 
-/* TODO: Add variables for common colors */
 .stdout-green {
   color: #9ece6a;
 }
@@ -218,7 +188,6 @@ body {
     background-color: #f9f9f9;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   .current-page {
     background-color: #0e0e00;
@@ -228,9 +197,12 @@ body {
 footer {
   text-align: center;
 }
+
 .about {
   width: fit-content;
   text-align: center;
   margin: auto;
   display: none;
 }
+
+/*# sourceMappingURL=style.css.map */

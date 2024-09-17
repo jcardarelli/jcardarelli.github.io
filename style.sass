@@ -1,0 +1,185 @@
+/* Variables */
+$terminal-bg-color: #1f2335
+$selection-bg-color: #2e3c64
+$selection-color: #c0c9f5
+$command-color: #7aa2f7
+$stdout-color: #c0caf4
+$stdout-green-color: #9ece6a
+$stdout-blue-color: #7aa2f7
+$prompt-dir-bg: #80acff
+$prompt-dir-color: #1e202f
+$prompt-git-bg: #9ecd6a  /* clean branch */
+$readline-color: #7dcfff
+$project-header-color: #0072ad
+
+$light-background: #f9f9f9
+$light-background-alt: #f0f0f0
+$dark-background: #0e0e00
+$border-color-light: #ccc
+$border-color-dark: #696969
+$border-hover-color: #ccc
+
+$font-monospace: monospace
+$font-size-body: 0.8em
+
+/* Overrides */
+pre
+  margin: 0
+
+body
+  font-size: $font-size-body
+
+/* Custom Classes */
+.header
+  padding-left: 0.65em
+  padding-top: 2em
+
+.header-desc
+  padding-left: 1.5em
+  margin-bottom: 3em
+  font-size: 1em
+
+.grid-sizer, .grid-item
+  width: 47%
+  margin-right: 1em
+  margin-bottom: 1em
+  padding: 1em
+  container-type: inline-size
+
+  @media (prefers-color-scheme: light)
+    border: 1px dashed $border-color-light
+
+  @media (prefers-color-scheme: dark)
+    background-color: transparent
+    border: 1px dashed $border-color-dark
+
+  &:hover
+    border: 1px dashed
+
+    @media (prefers-color-scheme: light)
+      background: $light-background
+      border-color: $border-hover-color
+
+    @media (prefers-color-scheme: dark)
+      background: #24283b
+      border-color: $border-hover-color
+
+.grid-item--width2
+  width: 80%
+
+.project
+  margin-bottom: 1em
+  padding: 1em
+
+.project-desc
+  font-style: italic
+
+.project-header
+  margin: 0 0 1em
+  padding-left: 0.55em
+  font-family: $font-monospace
+  font-weight: 100
+  font-size: 1.8em
+  color: $project-header-color
+
+  @media (prefers-color-scheme: light)
+    background-color: $light-background
+
+.project-title
+  margin-bottom: 0
+  font-size: 1.1em
+  font-style: italic
+  font-weight: 600
+
+.repo-link
+  font-weight: 200
+  font-size: 1.4em
+
+  @media (prefers-color-scheme: light)
+    background: $light-background-alt
+
+  @media (prefers-color-scheme: dark)
+    background-color: $dark-background
+
+.dotfile-program
+  width: 60px
+  height: 60px
+
+@media (prefers-color-scheme: light)
+  ::selection
+    background: #d6e4ff
+
+@media (prefers-color-scheme: dark)
+  ::selection
+    background: #000
+
+/* Fake terminal in CSS */
+.terminal
+  background-color: $terminal-bg-color
+  font-family: $font-monospace
+  font-size: 2.6cqw
+  line-height: 5cqw
+
+  pre::selection, .readline::selection, .readline .command::selection, .stdout::selection, .stdout-green::selection
+    background: $selection-bg-color
+
+  .prompt-dir::selection, .prompt-git::selection
+    background: $selection-bg-color
+    color: $selection-color
+
+.command
+  margin-left: 0.7em
+  font-size: 0.95em
+  color: $command-color
+
+.readline
+  background-color: inherit
+  padding: 2px 4px
+  font-size: 0.9em
+  color: $readline-color
+
+.prompt-dir, .prompt-git
+  padding: 2px 10px
+  font-size: 0.9em
+  color: $prompt-dir-color
+
+.prompt-dir
+  background-color: $prompt-dir-bg
+
+.prompt-git
+  background-color: $prompt-git-bg  /* clean branch */
+
+.stdout
+  background-color: inherit
+  color: $stdout-color
+  padding-left: 4px
+  padding-bottom: 4px
+  text-wrap: nowrap
+  line-height: 1.4em
+
+.stdout-green
+  color: $stdout-green-color
+
+.stdout-blue
+  color: $stdout-blue-color
+
+.small-button
+  font-family: $font-monospace
+  font-size: 0.8em
+  padding: 0.6em
+
+.current-page
+  @media (prefers-color-scheme: light)
+    background-color: $light-background
+
+  @media (prefers-color-scheme: dark)
+    background-color: $dark-background
+
+footer
+  text-align: center
+
+.about
+  width: fit-content
+  text-align: center
+  margin: auto
+  display: none
