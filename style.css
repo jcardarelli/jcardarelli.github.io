@@ -32,31 +32,24 @@ body {
     width: 100%;
   }
 }
+
 @media (prefers-color-scheme: light) {
-  .grid-sizer, .grid-item {
+  .grid-item {
+    background: #f9f9f9;
+    border-color: #ccc;
     border: 1px dashed #ccc;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .grid-sizer, .grid-item {
+  .grid-item {
+    background-color: #2e3c64;
+    border-color: #ccc;
     background-color: transparent;
     border: 1px dashed #696969;
   }
 }
-.grid-sizer:hover, .grid-item:hover {
+.grid-item:hover {
   border: 1px dashed;
-}
-@media (prefers-color-scheme: light) {
-  .grid-sizer:hover, .grid-item:hover {
-    background: #f9f9f9;
-    border-color: #ccc;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .grid-sizer:hover, .grid-item:hover {
-    background: #24283b;
-    border-color: #ccc;
-  }
 }
 
 .grid-item--width2 {

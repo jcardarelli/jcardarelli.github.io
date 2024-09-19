@@ -49,23 +49,20 @@ body
   @media (max-width: 520px)
     width: 100%
 
+.grid-item
   @media (prefers-color-scheme: light)
+    background: $light-background
+    border-color: $border-hover-color
     border: 1px dashed $border-color-light
 
   @media (prefers-color-scheme: dark)
+    background-color: $selection-bg-color
+    border-color: $border-hover-color
     background-color: transparent
     border: 1px dashed $border-color-dark
 
   &:hover
     border: 1px dashed
-
-    @media (prefers-color-scheme: light)
-      background: $light-background
-      border-color: $border-hover-color
-
-    @media (prefers-color-scheme: dark)
-      background: #24283b
-      border-color: $border-hover-color
 
 .grid-item--width2
   width: 80%
