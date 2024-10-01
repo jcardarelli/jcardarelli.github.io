@@ -1,6 +1,6 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/javascript"
+    directory: .
     schedule:
       interval: "weekly"
