@@ -1,0 +1,9 @@
+name: stylelint
+run-name: stylelint
+on: [push]
+jobs:
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "stylelint"
+        uses: actions-hub/stylelint@master
