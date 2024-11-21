@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "stylelint": "^16.6.0",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^36.0.1"
   },
   "dependencies": {
     "masonry": "^0.0.2",
